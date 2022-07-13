@@ -12,6 +12,7 @@
 		D7F4F3D4287E995800980AD5 /* SinopacPaulyswenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4F3D3287E995800980AD5 /* SinopacPaulyswenTests.swift */; };
 		D7F4F3D5287E995800980AD5 /* SinopacPaulyswen.h in Headers */ = {isa = PBXBuildFile; fileRef = D7F4F3C7287E995800980AD5 /* SinopacPaulyswen.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7F4F3DF287E9B8F00980AD5 /* Feeditem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4F3DE287E9B8F00980AD5 /* Feeditem.swift */; };
+		D7F4F3E1287E9D5200980AD5 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4F3E0287E9D5200980AD5 /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		D7F4F3CE287E995800980AD5 /* SinopacPaulyswenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinopacPaulyswenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F4F3D3287E995800980AD5 /* SinopacPaulyswenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopacPaulyswenTests.swift; sourceTree = "<group>"; };
 		D7F4F3DE287E9B8F00980AD5 /* Feeditem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeditem.swift; sourceTree = "<group>"; };
+		D7F4F3E0287E9D5200980AD5 /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				D7F4F3C7287E995800980AD5 /* SinopacPaulyswen.h */,
 				D7F4F3C8287E995800980AD5 /* SinopacPaulyswen.docc */,
 				D7F4F3DE287E9B8F00980AD5 /* Feeditem.swift */,
+				D7F4F3E0287E9D5200980AD5 /* FeedLoader.swift */,
 			);
 			path = SinopacPaulyswen;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F4F3E1287E9D5200980AD5 /* FeedLoader.swift in Sources */,
 				D7F4F3DF287E9B8F00980AD5 /* Feeditem.swift in Sources */,
 				D7F4F3C9287E995800980AD5 /* SinopacPaulyswen.docc in Sources */,
 			);
