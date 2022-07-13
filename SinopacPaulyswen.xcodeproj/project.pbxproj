@@ -77,8 +77,7 @@
 			children = (
 				D7F4F3C7287E995800980AD5 /* SinopacPaulyswen.h */,
 				D7F4F3C8287E995800980AD5 /* SinopacPaulyswen.docc */,
-				D7F4F3DE287E9B8F00980AD5 /* Feeditem.swift */,
-				D7F4F3E0287E9D5200980AD5 /* FeedLoader.swift */,
+				D7F4F3E2287ECB6400980AD5 /* Feed Feature */,
 			);
 			path = SinopacPaulyswen;
 			sourceTree = "<group>";
@@ -89,6 +88,15 @@
 				D7F4F3D3287E995800980AD5 /* SinopacPaulyswenTests.swift */,
 			);
 			path = SinopacPaulyswenTests;
+			sourceTree = "<group>";
+		};
+		D7F4F3E2287ECB6400980AD5 /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				D7F4F3DE287E9B8F00980AD5 /* Feeditem.swift */,
+				D7F4F3E0287E9D5200980AD5 /* FeedLoader.swift */,
+			);
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
