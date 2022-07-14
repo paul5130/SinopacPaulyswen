@@ -87,12 +87,28 @@ class RemoteFeedLoaderTests: XCTestCase {
             client.complete(withStatusCode: 200, data: json)
         })
     }
+    // 測試sut被deallocated後不會再回傳資料
+    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
+        let url = URL(string: "http://any-url.com")!
+        let client = HTTPClientSpy()
+        var sut: RemoteFeedLoader? = RemoteFeedLoader(url: url, client: client)
+
+        var capturedResults = [RemoteFeedLoader.RemoteFeedLoaderResult]()
+        sut?.load { capturedResults.append($0) }
+
+        sut = nil
+        client.complete(withStatusCode: 200, data: makeItemsJSON([]))
+
+        XCTAssertTrue(capturedResults.isEmpty)
+    }
 
     // MARK: - Helpers
 
-    private func makeSUT(url: URL = URL(string: "https://a-url.com")!) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
+    private func makeSUT(url: URL = URL(string: "https://a-url.com")!, file: StaticString = #file, line: UInt = #line) -> (sut: RemoteFeedLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
         let sut = RemoteFeedLoader(url: url, client: client)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        trackForMemoryLeaks(client, file: file, line: line)
         return (sut, client)
     }
 
@@ -116,13 +132,19 @@ class RemoteFeedLoaderTests: XCTestCase {
         return try! JSONSerialization.data(withJSONObject: json)
     }
 
-    private func expect(_ sut: RemoteFeedLoader, toCompleteWith result: Result<[FeedItem], RemoteFeedLoader.Error>, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
+    private func expect(_ sut: RemoteFeedLoader, toCompleteWith result: RemoteFeedLoader.RemoteFeedLoaderResult, when action: () -> Void, file: StaticString = #file, line: UInt = #line) {
         var capturedResults = [Result<[FeedItem], RemoteFeedLoader.Error>]()
         sut.load { capturedResults.append($0) }
 
         action()
 
         XCTAssertEqual(capturedResults, [result], file: file, line: line)
+    }
+
+    private func trackForMemoryLeaks(_ instance: AnyObject, file: StaticString = #file, line: UInt = #line) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance, "Instance should have been deallocated. Potential memory leak.", file: file, line: line)
+        }
     }
 
     private class HTTPClientSpy: HTTPClient {
