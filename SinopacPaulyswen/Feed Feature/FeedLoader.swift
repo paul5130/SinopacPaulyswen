@@ -8,5 +8,5 @@
 import Foundation
 
 protocol FeedLoader{
-    func load(completion: @escaping((Result<[Filtered],Error>) -> Void))
+    func load(completion: @escaping((Result<[FeedItem],Error>) -> Void))
 }

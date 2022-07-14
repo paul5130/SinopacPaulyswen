@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct Filtered: Decodable{
-    let pubDate: String
-    let title: String
-    let keywords: [String]
-}
-struct GetFeed: Decodable{
-    let data: Data
-    struct Data: Decodable{
-        let filtered: [Filtered]
+public struct FeedItem: Equatable {
+    public let id: UUID
+    public let description: String?
+    public let location: String?
+    public let imageURL: URL
+
+    public init(id: UUID, description: String?, location: String?, imageURL: URL) {
+        self.id = id
+        self.description = description
+        self.location = location
+        self.imageURL = imageURL
     }
 }
