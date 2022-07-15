@@ -13,6 +13,9 @@
 		D73EBA72287FE65A00EA3EF6 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBA71287FE65A00EA3EF6 /* URLSessionHTTPClientTests.swift */; };
 		D73EBA75287FEBF800EA3EF6 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBA74287FEBF800EA3EF6 /* URLSessionHTTPClient.swift */; };
 		D73EBA77287FEC4100EA3EF6 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBA76287FEC4100EA3EF6 /* XCTestCase+MemoryLeakTracking.swift */; };
+		D73EBA7F288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBA7E288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.swift */; };
+		D73EBA80288157AC00EA3EF6 /* SinopacPaulyswen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4F3C4287E995800980AD5 /* SinopacPaulyswen.framework */; };
+		D73EBA8928815D4F00EA3EF6 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73EBA76287FEC4100EA3EF6 /* XCTestCase+MemoryLeakTracking.swift */; };
 		D7F4F3CF287E995800980AD5 /* SinopacPaulyswen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F4F3C4287E995800980AD5 /* SinopacPaulyswen.framework */; };
 		D7F4F3DF287E9B8F00980AD5 /* Feeditem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4F3DE287E9B8F00980AD5 /* Feeditem.swift */; };
 		D7F4F3E1287E9D5200980AD5 /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4F3E0287E9D5200980AD5 /* FeedLoader.swift */; };
@@ -20,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D73EBA81288157AC00EA3EF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7F4F3BB287E995800980AD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7F4F3C3287E995800980AD5;
+			remoteInfo = SinopacPaulyswen;
+		};
 		D7F4F3D0287E995800980AD5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D7F4F3BB287E995800980AD5 /* Project object */;
@@ -36,6 +46,8 @@
 		D73EBA71287FE65A00EA3EF6 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 		D73EBA74287FEBF800EA3EF6 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		D73EBA76287FEC4100EA3EF6 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
+		D73EBA7C288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinopacPaulyswenAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73EBA7E288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinopacPaulyswenAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		D7F4F3C4287E995800980AD5 /* SinopacPaulyswen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SinopacPaulyswen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F4F3CE287E995800980AD5 /* SinopacPaulyswenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinopacPaulyswenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F4F3DE287E9B8F00980AD5 /* Feeditem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feeditem.swift; sourceTree = "<group>"; };
@@ -44,6 +56,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D73EBA79288157AC00EA3EF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D73EBA80288157AC00EA3EF6 /* SinopacPaulyswen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7F4F3C1287E995800980AD5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,11 +96,27 @@
 		D73EBA73287FE6F100EA3EF6 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
+				D73EBA8628815C0700EA3EF6 /* Helpers */,
 				D7F4F3E3287ECC6F00980AD5 /* RemoteFeedLoaderTest.swift */,
 				D73EBA71287FE65A00EA3EF6 /* URLSessionHTTPClientTests.swift */,
-				D73EBA76287FEC4100EA3EF6 /* XCTestCase+MemoryLeakTracking.swift */,
 			);
 			path = "Feed API";
+			sourceTree = "<group>";
+		};
+		D73EBA7D288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests */ = {
+			isa = PBXGroup;
+			children = (
+				D73EBA7E288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.swift */,
+			);
+			path = SinopacPaulyswenAPIEndToEndTests;
+			sourceTree = "<group>";
+		};
+		D73EBA8628815C0700EA3EF6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D73EBA76287FEC4100EA3EF6 /* XCTestCase+MemoryLeakTracking.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D7F4F3BA287E995800980AD5 = {
@@ -88,6 +124,7 @@
 			children = (
 				D7F4F3C6287E995800980AD5 /* SinopacPaulyswen */,
 				D7F4F3D2287E995800980AD5 /* SinopacPaulyswenTests */,
+				D73EBA7D288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests */,
 				D7F4F3C5287E995800980AD5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +134,7 @@
 			children = (
 				D7F4F3C4287E995800980AD5 /* SinopacPaulyswen.framework */,
 				D7F4F3CE287E995800980AD5 /* SinopacPaulyswenTests.xctest */,
+				D73EBA7C288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -140,6 +178,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D73EBA7B288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D73EBA83288157AC00EA3EF6 /* Build configuration list for PBXNativeTarget "SinopacPaulyswenAPIEndToEndTests" */;
+			buildPhases = (
+				D73EBA78288157AC00EA3EF6 /* Sources */,
+				D73EBA79288157AC00EA3EF6 /* Frameworks */,
+				D73EBA7A288157AC00EA3EF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D73EBA82288157AC00EA3EF6 /* PBXTargetDependency */,
+			);
+			name = SinopacPaulyswenAPIEndToEndTests;
+			productName = SinopacPaulyswenAPIEndToEndTests;
+			productReference = D73EBA7C288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D7F4F3C3287E995800980AD5 /* SinopacPaulyswen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D7F4F3D8287E995800980AD5 /* Build configuration list for PBXNativeTarget "SinopacPaulyswen" */;
@@ -186,6 +242,9 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					D73EBA7B288157AC00EA3EF6 = {
+						CreatedOnToolsVersion = 13.4;
+					};
 					D7F4F3C3287E995800980AD5 = {
 						CreatedOnToolsVersion = 13.4;
 					};
@@ -209,11 +268,19 @@
 			targets = (
 				D7F4F3C3287E995800980AD5 /* SinopacPaulyswen */,
 				D7F4F3CD287E995800980AD5 /* SinopacPaulyswenTests */,
+				D73EBA7B288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D73EBA7A288157AC00EA3EF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7F4F3C2287E995800980AD5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -231,6 +298,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D73EBA78288157AC00EA3EF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D73EBA7F288157AC00EA3EF6 /* SinopacPaulyswenAPIEndToEndTests.swift in Sources */,
+				D73EBA8928815D4F00EA3EF6 /* XCTestCase+MemoryLeakTracking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D7F4F3C0287E995800980AD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +333,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D73EBA82288157AC00EA3EF6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7F4F3C3287E995800980AD5 /* SinopacPaulyswen */;
+			targetProxy = D73EBA81288157AC00EA3EF6 /* PBXContainerItemProxy */;
+		};
 		D7F4F3D1287E995800980AD5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D7F4F3C3287E995800980AD5 /* SinopacPaulyswen */;
@@ -265,6 +346,34 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D73EBA84288157AC00EA3EF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = interview.SinopacPaulyswenAPIEndToEndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D73EBA85288157AC00EA3EF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = interview.SinopacPaulyswenAPIEndToEndTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		D7F4F3D6287E995800980AD5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,6 +580,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D73EBA83288157AC00EA3EF6 /* Build configuration list for PBXNativeTarget "SinopacPaulyswenAPIEndToEndTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D73EBA84288157AC00EA3EF6 /* Debug */,
+				D73EBA85288157AC00EA3EF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D7F4F3BE287E995800980AD5 /* Build configuration list for PBXProject "SinopacPaulyswen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

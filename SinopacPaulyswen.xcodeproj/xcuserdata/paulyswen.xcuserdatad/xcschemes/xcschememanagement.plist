@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SinopacPaulyswenAPIEndToEndTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>D73EBA7B288157AC00EA3EF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>D7F4F3C3287E995800980AD5</key>
 		<dict>
 			<key>primary</key>
