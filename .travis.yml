@@ -1,0 +1,7 @@
+os: osx
+osx_image: xcode13.4
+language: swift
+install:
+  - bundle install
+script: 
+  - xcodebuild clean build test -project SinopacPaulyswen.xcodeproj -scheme "CI" CODE_SIGN_IDENTIFY="" CODE_SIGNING_REQUIRED=NO
